@@ -21,22 +21,24 @@ El sistema está diseñado para ejecutarse en un entorno local utilizando XAMPP 
 ---
 
 #### Instalación y ejecución
-1. Clonar el repositorio
-`git clone <URL_DEL_REPOSITORIO>`
+1. Clonar el repositorio con el comando
+`git clone https://github.com/MalasTripas123/techhub`
 
-2. Mover el proyecto a
+2. Mover el proyecto descargado a
 `C:\xampp\htdocs\`
 
 3. Iniciar Apache y MySQL desde XAMPP
 
-4. Desde phpMyAdmin, crear base de datos del proyecto
-`Nombre: techhub`
+4. Entrar a phpMyAdmin en 
+`https://localhost/phpMyAdmin`, 
 
-5. Importar el archivo SQL que crea y popula las tablas.
-`/database/techhub.sql`
+5. En phpMyAdmin crear la base de datos del proyecto presionando `Nueva` en el panel de bases de datos a la izquierda de la página
+`Nombre de la base de datos: techhub`
 
-6. Para ejecutar en el navegador debe entrar a su carpeta localhost raiz +
-`/techhub/`
+5. Luego de crear la bbdd., ir a la pestaña `Importar` en la parte superior de la ventana. Ahí, importar el archivo SQL que crea y popula las tablas que viene en la carpeta del proyecto:
+`techhub/database/techhub.sql`
+
+6. Para ejecutar en el navegador debe entrar a su carpeta localhost raiz + `/techhub/`: `https://localhost/techhub`
 
 ---
 
