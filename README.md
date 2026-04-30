@@ -38,7 +38,9 @@ El sistema está diseñado para ejecutarse en un entorno local utilizando XAMPP 
 5. Luego de crear la bbdd., ir a la pestaña `Importar` en la parte superior de la ventana. Ahí, importar el archivo SQL que crea y popula las tablas que viene en la carpeta del proyecto:
 `techhub/database/techhub.sql`
 
-6. Para ejecutar en el navegador debe entrar a su carpeta localhost raiz + `/techhub/`: `https://localhost/techhub`
+6. Para ejecutar en el navegador debe entrar a `https://localhost/techhub`
+
+* Nota: Si tiene el servidor de apache corriendo en un puerto distinto al puerto por defecto (80), debe incluir el puerto en la url (ej: `https://localhost:9999/techhub`)
 
 ---
 
