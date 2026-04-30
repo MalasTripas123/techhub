@@ -1,0 +1,5 @@
+<?php
+// assets/img/default.jpg no existe aún, este script genera una imagen SVG de placeholder
+// Coloca este archivo en assets/img/default.php si quieres un placeholder dinámico
+// Pero lo más simple es usar una imagen real — ver README
+?>

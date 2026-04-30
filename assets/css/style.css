@@ -1,0 +1,192 @@
+
+/* ── Variables de color ──────────────────────────────────── */
+:root {
+    --color-primary:   #212529;
+    --color-accent:    #ffc107;
+    --color-bg:        #f8f9fa;
+    --color-card:      #ffffff;
+    --color-text:      #212529;
+    --color-muted:     #6c757d;
+    --radius:          12px;
+    --shadow:          0 2px 15px rgba(0,0,0,.08);
+    --shadow-hover:    0 6px 25px rgba(0,0,0,.15);
+    --transition:      all .25s ease;
+}
+
+/* ── Base ────────────────────────────────────────────────── */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+/* ── Hero Banner ─────────────────────────────────────────── */
+.hero-banner {
+    background: linear-gradient(to top, rgb(0, 0, 0) 0%, var(--color-primary) 50%, var(--color-primary) 100%);
+    position: relative;
+    overflow: hidden;
+    max-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ── Cards de productos ──────────────────────────────────── */
+.card {
+    border-radius: var(--radius) !important;
+}
+
+.card-hover {
+    transition: var(--transition);
+    cursor: pointer;
+}
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover) !important;
+}
+
+.card-img-wrapper {
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+/* ── Botones ─────────────────────────────────────────────── */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+.btn-dark:hover {
+    background-color: #333;
+    transform: translateY(-1px);
+}
+.btn-warning {
+    color: #212529 !important;
+    font-weight: 600;
+}
+
+/* ── Navbar ──────────────────────────────────────────────── */
+.navbar {
+    border-bottom: 2px solid rgba(255,193,7,.3);
+}
+.navbar-brand {
+    letter-spacing: -0.5px;
+}
+
+/* ── Formularios ─────────────────────────────────────────── */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 .2rem rgba(255,193,7,.25);
+}
+
+/* ── Tabla ───────────────────────────────────────────────── */
+.table th {
+    font-weight: 600;
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+/* ── Badges ──────────────────────────────────────────────── */
+.badge {
+    font-weight: 500;
+    letter-spacing: .3px;
+}
+
+/* ── Admin sidebar ───────────────────────────────────────── */
+.nav-link {
+    border-radius: 8px;
+    padding: .5rem .75rem;
+    transition: var(--transition);
+}
+.nav-link:hover {
+    background: rgba(0,0,0,.05);
+}
+.active-link {
+    background: rgba(255,193,7,.15) !important;
+    color: #212529 !important;
+}
+
+/* ── Toast ───────────────────────────────────────────────── */
+.toast {
+    border-radius: 10px;
+    min-width: 280px;
+}
+
+/* ── Spinner de carga ────────────────────────────────────── */
+.spinner-border {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/* ── Objecto fit imagen ──────────────────────────────────── */
+.object-fit-contain {
+    object-fit: contain;
+}
+
+/* ── Responsive ajustes ──────────────────────────────────── */
+@media (max-width: 576px) {
+    .hero-banner h1 {
+        font-size: 1.75rem;
+    }
+    .card-body {
+        padding: .85rem !important;
+    }
+    .btn-sm {
+        font-size: .75rem;
+    }
+    /* Tabla horizontal en móvil */
+    .table-responsive {
+        font-size: .85rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-fluid {
+        padding-left: .75rem;
+        padding-right: .75rem;
+    }
+    /* Sidebar en móvil va arriba */
+    .col-md-2 {
+        margin-bottom: 1rem;
+    }
+}
+
+/* ── Animación entrada cards ─────────────────────────────── */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.producto-card {
+    animation: fadeInUp .3s ease forwards;
+}
+.producto-card:nth-child(1) { animation-delay: .05s; }
+.producto-card:nth-child(2) { animation-delay: .10s; }
+.producto-card:nth-child(3) { animation-delay: .15s; }
+.producto-card:nth-child(4) { animation-delay: .20s; }
+.producto-card:nth-child(5) { animation-delay: .25s; }
+.producto-card:nth-child(6) { animation-delay: .30s; }
+.producto-card:nth-child(7) { animation-delay: .35s; }
+.producto-card:nth-child(8) { animation-delay: .40s; }
+
+/* ── Footer ──────────────────────────────────────────────── */
+footer a:hover {
+    color: var(--color-accent) !important;
+    text-decoration: underline !important;
+}
+
+/* ── Footer links visibles ───────────────────────────────── */
+.footer-link {
+    opacity: 0.85;
+    transition: opacity .2s, color .2s;
+}
+.footer-link:hover {
+    opacity: 1;
+    color: var(--color-accent) !important;
+}
